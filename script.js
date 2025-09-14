@@ -1,3 +1,5 @@
+const apiKey = process.env.COHERE_API_KEY;
+
 // Smooth scroll for navbar and buttons
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -128,7 +130,7 @@ Here is the user's query: "${query}"
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer xX9kAI4kvwzjw1IENYuXWeZnFsEPhpH0oPQbU64p`, // Replace with your actual API key
+        Authorization: `Bearer apiKey`, // Replace with your actual API key
       },
       body: JSON.stringify({
         model: "command-light",
